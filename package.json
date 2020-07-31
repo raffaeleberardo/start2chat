@@ -1,0 +1,25 @@
+{
+  "name": "start2chat",
+  "version": "1.0.0",
+  "description": "Simple chat project for debate on start2impact subjects",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "chat",
+    "start2impact",
+    "debate",
+    "digital"
+  ],
+  "author": "Raffaele Berardo",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "engines": {
+    "node" : "12.18.0"
+  }
+}

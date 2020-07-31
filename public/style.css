@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+#fixed-header{
+    background-color:#000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100px;
+}
+
+h1{
+    font-weight: 500;
+    color : #333333;
+    margin: 5px;
+    text-align: center;
+}
+
+h3{
+    font-size: 27px;
+    font-weight: 500;
+    color : #fff;
+    margin: 5px;
+    text-align: center;
+}
+
+h4{
+    font-weight: 500;
+    font-size: 18px;
+    color : #333333;
+    margin: 5px;
+    text-align: center;
+}
+
+h5{
+    font-weight: 500;
+    font-size: 23px;
+    color : #fff;
+    margin: 5px;
+    text-align: center;
+}
+
+body{
+    height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EDF1F480;
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+#username{
+    width: 80vw;
+    max-width: 420px;
+}
+
+#username, input[type='submit']{
+    max-height: 56px;
+    padding: 16px;
+    margin-bottom: 32px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+select{
+    width: 80vw;
+    height: 33vh;
+    max-width: 420px;
+    max-height: 56px;
+    padding: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+
+input[type='submit']{
+    width: 55vw;
+    max-width: 250px;
+    background-color: #ffc406;
+    color: #fff;
+    transition: transform .5s;
+    -webkit-appearance: none;
+}
+
+input[type='submit']:hover{
+    background-color: #1BD560;
+    cursor: pointer;
+    transform: scale(1.68);
+    -webkit-appearance: none;
+}
+
+#form-container{
+    height: 95%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: inherit;
+}
+
+#header-logo{
+    margin: 40px;
+    height: 64px;
+    width: 64px;
+}
+
+#footer-logo{
+    height: 36px;
+    width: 165px;
+}
+
+footer{
+    background-color: black;
+    width: 100vw;
+    min-height: 50px;
+    height: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+/*room style*/
+#msg-typing{
+    font-size: 15px;
+    color: #fff;
+    height: 20px;
+    padding-left: 5px;
+}
+
+#msg-container{
+    display: flex;
+    flex-direction: column;
+    background-image: url("/img/msg-container.png");
+    height: 95%;
+    width: 100vw;
+    overflow-y: scroll;
+    padding: 2px;
+}
+
+
+#msg-box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 40px;
+    height: 5%;
+    padding: 2px;
+}
+
+#msg{
+    width: 85%;
+    padding: 7px;
+    border-radius: 5px;
+    border-style: none;
+    margin-right: 5px;
+}
+
+#snd{
+    width: 5%;
+    min-width: 60px;
+    background-color: #ffc406;
+    color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+#snd:hover{
+    background-color: #1BD560;
+    cursor: pointer;
+}
+
+.me{
+    position: relative;
+    align-self: flex-end;
+    background-color: lightgreen;
+    max-width: 80vw;
+    padding: 3px 10px 3px 5px;
+    margin: 1px;
+    margin-right: 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.me:after{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: lightgreen;
+    transform: rotate(45deg);
+    top: 4px;
+    right: -5px;
+    background-attachment: fixed;
+    border-bottom-left-radius: 10px;
+}
+
+
+#span-username{
+    font-weight: 800;
+}
+
+#time{
+    margin-left: 10px;
+    font-size: 0.6em;
+    font-weight: 800;
+}
+
+.others{
+    align-self: flex-start;
+    background-color: lightsalmon;
+    max-width: 80vw;
+    padding: 3px 5px 3px 10px;
+    margin: 1px;
+    margin-left: 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.others:after{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: lightsalmon;
+    transform: rotate(-45deg);
+    top: 4px;
+    left: -5px;
+    background-attachment: fixed;
+    border-bottom-right-radius: 10px;
+}
+
+.join-room{
+    align-self: center;
+    width: 50%;
+    padding: 3px;
+    margin: 1px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    text-align: center;
+}

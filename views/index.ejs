@@ -1,0 +1,26 @@
+<%- include('partials/head.ejs') %>
+<body>
+        <header>
+            <a href="https://www.start2impact.it/" target="_blank">
+                <img id="header-logo" src="/img/logo.png" alt="start2impact">
+            </a>
+            <h1>Start2Chat</h1>
+            <h4>Discussioni fra studenti di start2impact</h4>
+        </header>
+        <div id="form-container">
+            <form action="/room" method="GET">
+                    <input type="text" name='username' id="username" placeholder="Username" required>
+                    <select name="room" id="room" required>
+                        <option disabled selected>Seleziona la stanza</option>
+                        <% rooms.forEach(room => { %>
+                            <option value =<%= room.replace(" ", "_")%>>
+                                <%= room %>
+                            </option>
+                        <% }); %>
+                    </select>
+                <input type="submit" value="Entra nella stanza">
+            </form>
+        </div>
+        <%- include('partials/footer.ejs') %>
+</body>
+</html>

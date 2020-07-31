@@ -1,0 +1,21 @@
+<%- include('partials/head.ejs') %>
+<body>
+    <header id="fixed-header">
+        <h3><%=room %></h1>
+        <h5>Utenti online: <span id="online-users"></span></h5>
+        <p id="msg-typing"></p>
+    </header>
+    <div id="switch-content">
+
+    </div>
+    <div id="msg-container">
+
+    </div>
+    <div id="msg-box">
+        <input type="text" id="msg" placeholder="Inserisci messaggio">
+        <button id="snd">Invia</button>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/chat.js"></script>
+</body>
+</html>
