@@ -200,9 +200,9 @@ footer{
 }
 
 #snd{
-    width: 5%;
     min-width: 60px;
     background-color: #ffc406;
+    font-size: 1.3em;
     color: #fff;
     padding: 7px;
     border-radius: 5px;
