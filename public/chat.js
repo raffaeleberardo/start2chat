@@ -48,9 +48,9 @@ const sendMsg = function(){
         let minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes();
         let time = hours + ':' + minutes;
         socket.emit('msg-server', {username, room, msg : msg.value, time});
-        msg.value = '';
         msg.select();
         createMsg(username, msg.value, time, 'me');
+        msg.value = '';
     }
 }
 
